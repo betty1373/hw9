@@ -3,19 +3,20 @@ cmake_minimum_required(VERSION 3.2)
 if (NOT DEFINED ENV{GITHUB_RUN_NUMBER})
     set(ENV{GITHUB_RUN_NUMBER} 1)
 endif()
-project(bulk VERSION 0.0.$ENV{GITHUB_RUN_NUMBER})
+project(bulkmt VERSION 0.0.$ENV{GITHUB_RUN_NUMBER})
+find_package(Threads REQUIRED)
 
 configure_file(version.h.in ${PROJECT_SOURCE_DIR}/version.h)
 
-add_executable(bulk ${PROJECT_SOURCE_DIR}/main.cpp ${PROJECT_SOURCE_DIR}/inc/Logger.h)
+add_executable(bulkmt ${PROJECT_SOURCE_DIR}/main.cpp ${PROJECT_SOURCE_DIR}/inc/Logger.h)
 
-set_target_properties(bulk PROPERTIES
-    CXX_STANDARD 17
+set_target_properties(bulkmt PROPERTIES
+    CXX_STANDARD 20
     CXX_STANDARD_REQUIRED ON
     COMPILE_OPTIONS "-Wall;-Wextra;-pedantic"
 )
 
-install(TARGETS bulk RUNTIME DESTINATION bin)
+install(TARGETS bulkmt RUNTIME DESTINATION bin)
 
 set(CPACK_GENERATOR DEB)
 set(CPACK_PACKAGE_VERSION_MAJOR "${PROJECT_VERSION_MAJOR}")

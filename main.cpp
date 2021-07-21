@@ -14,8 +14,8 @@ int main(int argc, char * argv[]) {
       return EXIT_FAILURE;
    }
    auto cmdReader = CmdReader::Create(num);
-   auto consoleLogger = ConsoleLogger::Create(cmdReader);
-   auto fileLogger = FileLogger::Create(cmdReader);
+   auto consoleLogger = ConsoleLogger::Create("log",cmdReader);
+   auto fileLogger = FileLogger::Create("file",cmdReader);
    try {
       cmdReader->Work();
    }

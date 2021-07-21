@@ -6,7 +6,6 @@
 #include <list>
 #include <chrono>
 #include "Observer.h"
-#include <thread>
 /// @file
 /// @brief Class for reading commands from input stream, processing their and notifying subscribers.
 /// @author btv<example@example.com>
@@ -81,7 +80,7 @@ public:
                     if (cnt_braces==0 && m_cmds.size()==m_num_cmds) Notify();
                 }
             }
-            std::this_thread::sleep_for(dura);
+            //std::this_thread::sleep_for(dura);
         }
         if ((cnt_braces==0) && !m_cmds.empty()) Notify();
     };
