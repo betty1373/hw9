@@ -15,7 +15,9 @@ set_target_properties(bulkmt PROPERTIES
     CXX_STANDARD_REQUIRED ON
     COMPILE_OPTIONS "-Wall;-Wextra;-pedantic"
 )
-
+target_link_libraries(bulkmt
+    ${CMAKE_THREAD_LIBS_INIT}
+)
 install(TARGETS bulkmt RUNTIME DESTINATION bin)
 
 set(CPACK_GENERATOR DEB)
