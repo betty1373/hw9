@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['_7ecmdreader_43',['~CmdReader',['../class_cmd_reader.html#a5202e750035579e6d7269b695f8a5c9b',1,'CmdReader']]],
-  ['_7econsolelogger_44',['~ConsoleLogger',['../class_console_logger.html#a3be1e5529580f0ba3bc98b4e18ccd5a8',1,'ConsoleLogger']]],
-  ['_7efilelogger_45',['~FileLogger',['../class_file_logger.html#af255961bda9980fab979996276e4b5e1',1,'FileLogger']]],
-  ['_7eobservable_46',['~Observable',['../class_observable.html#a058acb5a674eba2b96648c66a27440d8',1,'Observable']]],
-  ['_7eobserver_47',['~Observer',['../class_observer.html#afcc6b67be6c386f2f3d2c363aa59cb47',1,'Observer']]]
+  ['wextra_44',['Wextra',['../_c_make_lists_8txt.html#a1b2bdaabe7939bd6bf795b37dd3b8787',1,'CMakeLists.txt']]],
+  ['work_45',['Work',['../class_cmd_reader.html#a36adba875846c4460b817d3df251774b',1,'CmdReader']]],
+  ['work6_20_20cmd_20bulk_46',['work6  cmd bulk',['../md__r_e_a_d_m_e.html',1,'']]]
 ];

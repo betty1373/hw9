@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['observable_28',['Observable',['../class_observable.html',1,'']]],
-  ['observer_29',['Observer',['../class_observer.html',1,'']]],
-  ['observer_2eh_30',['Observer.h',['../_observer_8h.html',1,'']]]
+  ['notify_29',['Notify',['../class_cmd_reader.html#adce37b14013a2c6a4064dcf66465fa5c',1,'CmdReader::Notify()'],['../class_observable.html#a52aa9260a018feb3e14c4607ab2778ac',1,'Observable::Notify()']]]
 ];

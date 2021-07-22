@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['update_74',['Update',['../class_console_logger.html#ab75a39ba8d7d9c5b90f3292247b75e8c',1,'ConsoleLogger::Update()'],['../class_file_logger.html#a682946c821d8a412b3f77db99fa2afde',1,'FileLogger::Update()'],['../class_observer.html#a7b2adc9ad992dd9abe17433b3ab7e89d',1,'Observer::Update()']]]
+  ['notify_76',['Notify',['../class_cmd_reader.html#adce37b14013a2c6a4064dcf66465fa5c',1,'CmdReader::Notify()'],['../class_observable.html#a52aa9260a018feb3e14c4607ab2778ac',1,'Observable::Notify()']]]
 ];

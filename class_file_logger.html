@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>bulk: FileLogger Class Reference</title>
+<title>bulkmt: FileLogger Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">bulk
+   <div id="projectname">bulkmt
    </div>
    <div id="projectbrief">otus hw6</div>
   </td>
@@ -106,10 +106,10 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a4a9278ec54574f5ce273242bb10f725e"><td class="memItemLeft" align="right" valign="top">static std::shared_ptr&lt; <a class="el" href="class_observer.html">Observer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file_logger.html#a4a9278ec54574f5ce273242bb10f725e">Create</a> (std::shared_ptr&lt; <a class="el" href="class_cmd_reader.html">CmdReader</a> &gt; &amp;reader)</td></tr>
-<tr class="memdesc:a4a9278ec54574f5ce273242bb10f725e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create object class - PatternCreater <br  />
-  <a href="class_file_logger.html#a4a9278ec54574f5ce273242bb10f725e">More...</a><br /></td></tr>
-<tr class="separator:a4a9278ec54574f5ce273242bb10f725e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addd27040d1f40c1e38a285e5a79a634b"><td class="memItemLeft" align="right" valign="top">static std::shared_ptr&lt; <a class="el" href="class_observer.html">Observer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file_logger.html#addd27040d1f40c1e38a285e5a79a634b">Create</a> (const std::string &amp;name, std::shared_ptr&lt; <a class="el" href="class_cmd_reader.html">CmdReader</a> &gt; &amp;reader)</td></tr>
+<tr class="memdesc:addd27040d1f40c1e38a285e5a79a634b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create object class - PatternCreater <br  />
+  <a href="class_file_logger.html#addd27040d1f40c1e38a285e5a79a634b">More...</a><br /></td></tr>
+<tr class="separator:addd27040d1f40c1e38a285e5a79a634b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="af255961bda9980fab979996276e4b5e1"></a>
@@ -138,8 +138,8 @@ Static Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a4a9278ec54574f5ce273242bb10f725e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4a9278ec54574f5ce273242bb10f725e">&#9670;&nbsp;</a></span>Create()</h2>
+<a id="addd27040d1f40c1e38a285e5a79a634b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addd27040d1f40c1e38a285e5a79a634b">&#9670;&nbsp;</a></span>Create()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -150,9 +150,19 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">static std::shared_ptr&lt;<a class="el" href="class_observer.html">Observer</a>&gt; FileLogger::Create </td>
           <td>(</td>
-          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_cmd_reader.html">CmdReader</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>reader</em></td><td>)</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_cmd_reader.html">CmdReader</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>reader</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
