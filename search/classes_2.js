@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['observable_55',['Observable',['../class_observable.html',1,'']]],
-  ['observer_56',['Observer',['../class_observer.html',1,'']]]
+  ['observable_56',['Observable',['../class_observable.html',1,'']]],
+  ['observer_57',['Observer',['../class_observer.html',1,'']]]
 ];
