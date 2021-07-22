@@ -31,14 +31,12 @@ public:
         }
         m_cv.notify_all();
     };
-private:
-    std::thread m_thread;
-    std::atomic<bool> m_stop;
+private:  
 
     ConsoleLogger(const std::string& m_name) :
-        m_stop (false),
+        m_stop {false},
         m_thread {&ConsoleLogger::Work,this,m_name}
-    {};
+    {}
 /// @brief Subscribe to receiving notifications
    void SetCmdReader(std::shared_ptr<CmdReader>& _reader) {
         m_reader = _reader;
@@ -49,9 +47,10 @@ private:
     }
     void Work(std::string prefix)
     {
-        std::string ss;
+        
         while (!m_stop)
         {
+            std::string ss;
             {
                 std::unique_lock<std::mutex> lk(m_mutex);
                 m_cv.wait(lk,[&]() {return !m_deque.empty() || m_stop;});
@@ -61,6 +60,7 @@ private:
                     m_deque.pop_front();
                 }
             }
+            if (ss.length()>0)
             {
                 std::unique_lock<std::mutex> lk(m_outmutex); 
                 std::cout<<ss<<std::endl;
@@ -79,7 +79,8 @@ private:
    
     std::mutex m_mutex;
     std::mutex m_outmutex;
-   
+    std::thread m_thread;
+    std::atomic<bool> m_stop;
     std::condition_variable m_cv;
     std::deque<std::string> m_deque;
 };
@@ -114,12 +115,12 @@ private:
             m_threads.emplace_back(std::thread(&FileLogger::Work,this,m_name));
         }
 
-    };
+    }
     void Work(std::string postfix)
     {
-        std::string ss;
         while (!m_stop)
         {
+            std::string ss;
             {
                 std::unique_lock<std::mutex> lk(m_mutex);
                 m_cv.wait(lk,[&]() {return !m_deque.empty() || m_stop;});
@@ -129,9 +130,10 @@ private:
                     m_deque.pop_front();
                 }
             }
+            if (ss.length()>0)
             {
                 auto time = std::to_string(std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count());
-                auto fileName{"bulk_"+postfix+time+".log"};
+                auto fileName{"bulk_"+postfix+"_"+time+".log"};
                 std::ofstream log(fileName,std::ios::out);
                 log << ss << std::endl;
                 log.close();

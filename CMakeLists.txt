@@ -9,13 +9,15 @@ find_package(Threads REQUIRED)
 configure_file(version.h.in ${PROJECT_SOURCE_DIR}/version.h)
 
 add_executable(bulkmt ${PROJECT_SOURCE_DIR}/main.cpp ${PROJECT_SOURCE_DIR}/inc/Logger.h)
+set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fno-omit-frame-pointer -fsanitize=address")
+set (CMAKE_LINKER_FLAGS "${CMAKE_LINKER_FLAGS} -fno-omit-frame-pointer -fsanitize=address")
 
 set_target_properties(bulkmt PROPERTIES
     CXX_STANDARD 20
     CXX_STANDARD_REQUIRED ON
     COMPILE_OPTIONS "-Wall;-Wextra;-pedantic"
 )
-target_link_libraries(bulkmt
+target_link_libraries(bulkmt -fsanitize=address
     ${CMAKE_THREAD_LIBS_INIT}
 )
 install(TARGETS bulkmt RUNTIME DESTINATION bin)
